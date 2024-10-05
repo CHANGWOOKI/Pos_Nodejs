@@ -1,17 +1,42 @@
 /* 전체 레이아웃 */
 .sales-register {
   width: 100%;
-  max-width: 1200px;  /* 웹페이지의 최대 너비를 설정하여 반응형으로 */
-  margin: 0 auto;     /* 화면 가운데 정렬 */
+  margin: 0 auto;
   padding: 20px;
   background-color: #f9f9f9;
   border: 1px solid #ccc;
   border-radius: 8px;
+  margin-bottom: 20px;
 }
 
-.sales-register h2 {
-  text-align: center;
+/* 타이틀과 오른쪽 버튼 영역 */
+.title-container {
+  display: flex;
+  justify-content: space-between; /* 타이틀과 버튼을 좌우로 배치 */
+  align-items: center;
   margin-bottom: 20px;
+}
+
+.title-container h2 {
+  margin: 0;
+}
+
+.right-buttons {
+  display: flex;
+  gap: 10px; /* 버튼 간격 */
+}
+
+.right-buttons button {
+  background-color: #007bff;
+  color: white;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.right-buttons button:hover {
+  background-color: #0056b3;
 }
 
 /* 판매 등록 상단 영역 */
@@ -38,11 +63,11 @@
   margin-bottom: 20px;
 }
 
-/* 판매 금액 관련 영역 (최초가부터 판매등록까지 한 줄에 배치) */
+/* 판매 금액 관련 영역 */
 .sales-amounts {
   display: grid;
-  grid-template-columns: repeat(12, minmax(80px, 1fr));  /* 12개의 열, 최소 크기 설정 */
-  gap: 10px;  /* 각 필드 사이 간격을 줄여 한 줄에 모두 들어가도록 설정 */
+  grid-template-columns: repeat(12, minmax(80px, 1fr)); /* 12개의 열, 최소 크기 설정 */
+  gap: 10px;
   margin-bottom: 20px;
 }
 
@@ -59,7 +84,7 @@
 
 .field input,
 .field select {
-  padding: 6px;  /* 패딩을 줄여서 필드의 크기를 줄임 */
+  padding: 6px;
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;  /* 부모 컨테이너를 초과하지 않도록 */
@@ -81,7 +106,7 @@
 }
 
 button {
-  padding: 8px 15px;  /* 버튼의 패딩을 줄여 크기 조정 */
+  padding: 8px 15px;
   background-color: #007bff;
   color: white;
   border: none;
@@ -93,9 +118,45 @@ button:hover {
   background-color: #0056b3;
 }
 
-/* 반응형 디자인 - 최대 너비만 변화시키기 */
+/* 테이블 스타일 */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+th, td {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 8px;
+}
+
+th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9; /* 짝수 행 배경색 */
+}
+
+tfoot {
+  font-weight: bold;
+  background-color: #f9f9f9;
+}
+
+tfoot td {
+  text-align: center;
+}
+
+.total {
+  text-align: center;
+  font-weight: bold;
+}
+
+/* 반응형 디자인 */
 @media (max-width: 1200px) {
   .sales-register {
-    max-width: 100%;  /* 화면이 작아질 경우 최대 너비를 100%로 설정 */
+    padding: 10px; /* 화면이 작아질 경우 패딩만 줄여서 레이아웃 조정 */
   }
 }

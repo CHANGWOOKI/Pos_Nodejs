@@ -4,7 +4,14 @@ import "../../components/css/SalesRegister.css"; // CSS 파일 경로
 const SalesRegister = () => {
   return (
     <div className="sales-register">
-      <h2>판매등록</h2>
+      <div className="title-container">
+        <h2>판매등록</h2>
+        <div className="right-buttons">
+          <button type="button">타매장재고</button>
+          <button type="button">반품관리</button>
+          <button type="button">삭제</button>
+        </div>
+      </div>
 
       <div className="sales-header">
         <div className="field">
@@ -33,8 +40,12 @@ const SalesRegister = () => {
           <label>단가적용일</label>
           <input type="date" />
         </div>
-        <div className="field">         
-          <label htmlFor="field"> <input type="checkbox" id="field" />바코드 바로 등록 </label>
+        <div className="field">
+          <label htmlFor="field">
+            {" "}
+            <input type="checkbox" id="field" />
+            바코드 바로 등록{" "}
+          </label>
         </div>
       </div>
 
@@ -129,6 +140,43 @@ const SalesRegister = () => {
       <div className="field">
         <label>비고</label>
         <input type="text" />
+      </div>
+
+      <div>
+        <table>
+          <thead>
+            <tr>
+              <th>구분</th>
+              <th>유형</th>
+              <th>품번</th>
+              <th>품명</th>
+              <th>색상</th>
+              <th>사이즈</th>
+              <th>판매구분</th>
+              <th>할인율</th>
+              <th>현판매금액</th>
+              <th>수량</th>
+              <th>실판매금액</th>
+              <th>에누리</th>
+              <th>사용포인트</th>
+              <th>삭제</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td colspan="14" >
+                등록된 정보가 없습니다.
+              </td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="14" >
+                총계
+              </td>
+            </tr>
+          </tfoot>
+        </table>
       </div>
     </div>
   );
