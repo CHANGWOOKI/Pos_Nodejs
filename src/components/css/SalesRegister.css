@@ -1,0 +1,101 @@
+/* 전체 레이아웃 */
+.sales-register {
+  width: 100%;
+  max-width: 1200px;  /* 웹페이지의 최대 너비를 설정하여 반응형으로 */
+  margin: 0 auto;     /* 화면 가운데 정렬 */
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.sales-register h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* 판매 등록 상단 영역 */
+.sales-header {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);  /* 6개의 열로 고정 배치 */
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+/* 바코드 및 판매 금액 영역 */
+.sales-barcode {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);  /* 3개의 열로 고정 배치 */
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+/* 판매 구분, 반품구분, 유형 영역 */
+.sales-details {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);  /* 3개의 열로 고정 배치 */
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+/* 판매 금액 관련 영역 (최초가부터 판매등록까지 한 줄에 배치) */
+.sales-amounts {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(80px, 1fr));  /* 12개의 열, 최소 크기 설정 */
+  gap: 10px;  /* 각 필드 사이 간격을 줄여 한 줄에 모두 들어가도록 설정 */
+  margin-bottom: 20px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+}
+
+.field label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: 0.9rem;  /* 레이블의 폰트 크기를 줄여서 공간을 확보 */
+}
+
+.field input,
+.field select {
+  padding: 6px;  /* 패딩을 줄여서 필드의 크기를 줄임 */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;  /* 부모 컨테이너를 초과하지 않도록 */
+}
+
+.checkbox-field {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-field input {
+  margin-right: 5px;
+}
+
+.button-field {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+button {
+  padding: 8px 15px;  /* 버튼의 패딩을 줄여 크기 조정 */
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* 반응형 디자인 - 최대 너비만 변화시키기 */
+@media (max-width: 1200px) {
+  .sales-register {
+    max-width: 100%;  /* 화면이 작아질 경우 최대 너비를 100%로 설정 */
+  }
+}
