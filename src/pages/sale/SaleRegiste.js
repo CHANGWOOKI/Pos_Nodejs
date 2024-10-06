@@ -86,6 +86,21 @@ const SalesRegister = () => {
         </div>
       </div>
 
+      <div className="sales-barcode">
+        <div className="field">
+          <label>품번</label>
+          <input type="text" />
+        </div>
+        <div className="field">
+          <label>색상</label>
+          <input type="text" />
+        </div>
+        <div className="field">
+          <label>사이즈</label>
+          <input type="text" />
+        </div>
+      </div>
+
       <div className="sales-amounts">
         <div className="field">
           <label>최초가</label>
