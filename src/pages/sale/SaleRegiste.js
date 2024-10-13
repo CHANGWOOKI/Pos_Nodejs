@@ -1,5 +1,5 @@
 import React from "react";
-import "../../components/css/SalesRegister.css"; // CSS 파일 경로
+import "../../components/css/Common.scss"; // CSS 파일 경로
 
 const SalesRegister = () => {
   return (
@@ -179,14 +179,14 @@ const SalesRegister = () => {
           </thead>
           <tbody>
             <tr>
-              <td colspan="14" >
+              <td colSpan="14" >
                 등록된 정보가 없습니다.
               </td>
             </tr>
           </tbody>
           <tfoot>
             <tr>
-              <td colspan="14" >
+              <td colSpan="14" >
                 총계
               </td>
             </tr>

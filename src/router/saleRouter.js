@@ -1,12 +1,19 @@
-import { Suspense } from "react"
+import { lazy } from "react";
 
-const SalesRouter = () => {
-  return[
+const SaleList = lazy(() => import("../pages/sale/saleList"));
+const SalesRegiste = lazy(() => import("../pages/sale/SaleRegiste"));
+
+const SaleRouter = () => {
+  return [
     {
-      Path : "",
-      Element : <Suspense></Suspense>
-    }
+      path: 'registe',
+      element: <SalesRegiste />,
+    },
+    {
+      path: 'list',
+      element: <SaleList />,
+    },
   ];
-};
+}
 
-export default SalesRouter;
+export default SaleRouter;

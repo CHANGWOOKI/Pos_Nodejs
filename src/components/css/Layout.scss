@@ -1,0 +1,63 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2a4573;  /* 배경 색상 */
+  padding: 10px 30px;
+  color: #fff;
+
+  a {
+    text-decoration: none;  /* 모든 링크에서 밑줄 제거 */
+    color: inherit;  /* 기본 색상 상속 (부모 요소의 색상) */
+  }
+
+  .header-left {
+    display: flex;
+    align-items: center;
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+
+      a {
+        color: #fff;  /* SewonPOS 로고 링크 색상 */
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: #00b5f1;  /* SewonPOS 로고 호버 시 색상 */
+        }
+      }
+    }
+  }
+
+  .header-right {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+
+    .menu-item {
+      margin-left: 20px; /* 아이템 간 간격 */
+      font-size: 1.1rem;  /* 글씨 크기 */
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+
+      a {
+        color: #fff;  /* 메뉴 링크 색상 */
+        display: flex;
+        align-items: center;
+        transition: color 0.3s ease;
+
+        i {
+          margin-right: 8px;  /* 아이콘과 텍스트 간 간격 */
+          font-size: 1.3rem;  /* 아이콘 크기 */
+        }
+
+        &:hover {
+          color: #00b5f1;  /* 메뉴 링크 호버 시 색상 */
+        }
+      }
+    }
+  }
+}
